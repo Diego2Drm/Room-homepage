@@ -1,3 +1,4 @@
+import { About } from "./components/About/About"
 import { NavBar } from "./components/NavBar/NavBar"
 import { Slider } from "./components/Slider/Slider"
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <NavBar />
       <Slider />
+      <About />
     </>
   )
 }

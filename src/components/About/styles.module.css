@@ -1,0 +1,23 @@
+.containerAbout {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+.content {
+  padding: 4rem 3rem;
+  h3{
+    color: var(--Black);
+    font-weight: 700;
+    font-size: 1.68em;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+  }
+  p{
+    color: var(--Dark-Gray);
+    font-weight: 500;
+    font-size: 1.55rem;
+    margin-block-start: 1.8rem;
+    line-height: 2rem;
+  }
+}
