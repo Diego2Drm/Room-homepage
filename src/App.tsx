@@ -1,9 +1,10 @@
+import { NavBar } from "./components/NavBar/NavBar"
 
 function App() {
 
   return (
     <>
-      <h1>Room Homepage Master</h1>
+      <NavBar />
     </>
   )
 }
