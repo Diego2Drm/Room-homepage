@@ -33,6 +33,16 @@
       display: inline;
       min-width: 100%;
 
+      figure {
+        img {
+          width: 100%;
+        }
+
+        img:nth-child(2) {
+          display: none;
+        }
+      }
+
       div {
         display: flex;
         flex-direction: column;
@@ -53,21 +63,110 @@
           margin-block-start: 1.5rem;
           line-height: 2rem;
         }
+
+        .iconArrow {
+          margin: 5rem 0 3rem;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          gap: 3rem;
+          text-decoration: none;
+
+          p {
+            margin-block-start: 0;
+            color: var(--Black);
+            font-size: 1.6rem;
+            letter-spacing: 1rem;
+            font-weight: 700;
+          }
+        }
       }
+    }
+  }
+}
 
-      .iconArrow {
-        width: 100%;
-        padding: 0 3rem;
+@media (min-width: 768px) {
+  .arrows {
+    right: 0;
+    top: 43.7rem;
+  }
+
+  .containerInfo {
+    ul {
+      li {
+        figure {
+          img:nth-child(1) {
+            display: none;
+          }
+
+          img:nth-child(2) {
+            display: flex;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .arrows {
+    right: 53rem;
+    top: 46rem;
+    width: 15rem;
+    height: 7.5rem;
+    gap: 5rem;
+
+    img {
+      width: 2rem;
+    }
+  }
+
+  .containerInfo {
+    ul {
+      li {
         display: flex;
-        align-items: center;
-        gap: 3rem;
-        text-decoration: none;
 
-        p {
-          color: var(--Black);
-          font-size: 1.6rem;
-          letter-spacing: 1rem;
-          font-weight: 700;
+        figure {
+          width: 100%;
+
+          img:nth-child(1) {
+            display: none;
+          }
+
+          img:nth-child(2) {
+            display: flex;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        div {
+          width: 70%;
+          justify-content: center;
+          padding-inline: 10rem;
+
+          h3 {
+            font-size: 4.5rem;
+            line-height: 4rem;
+          }
+
+          p {
+            font-size: 1.8rem;
+            margin-block-start: 2rem;
+            line-height: 3rem;
+          }
+
+          .iconArrow {
+            p {
+              font-size: 2rem;
+            }
+
+            img {
+              width: 6rem;
+            }
+          }
         }
       }
     }

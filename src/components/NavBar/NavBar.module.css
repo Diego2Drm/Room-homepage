@@ -21,13 +21,14 @@
   z-index: 1;
 }
 
-.navbarContent{
+.navbarContent {
   background: var(--White);
   padding: 3rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .navbarContent ul {
   list-style: none;
   display: flex;
@@ -35,4 +36,25 @@
   color: var(--Black);
   font-weight: 700;
   font-size: 1.4rem;
+}
+
+@media (min-width: 1024px) {
+  .container{
+    background: transparent;
+    align-items: center;
+    gap: 5rem;
+  }
+  .iconMenu, .iconClose{
+    display: none;
+  }
+  .dislabel {
+    display: flex;
+  }
+  .navbarContent{
+    background: transparent;
+  }
+  .navbarContent ul {
+    color: var(--White);
+    font-size: 2rem;
+  }
 }

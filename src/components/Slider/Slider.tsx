@@ -27,26 +27,26 @@ const Slider: React.FC = () => {
   useEffect(() => {
     const listNode = listRef.current;
 
-    if(listNode){
+    if (listNode) {
       const infoNode = listNode.querySelectorAll("li")[currentIndex];
 
-      if(infoNode){
-        infoNode.scrollIntoView({ behavior: "smooth"})
+      if (infoNode) {
+        infoNode.scrollIntoView({ behavior: "smooth" })
       }
     }
-    
-}, [currentIndex])
 
-  const showSlider = ( direction : string) => {
-    if(direction === "prev"){
-      setCurrentindex( curr => {
+  }, [currentIndex])
+
+  const showSlider = (direction: string) => {
+    if (direction === "prev") {
+      setCurrentindex(curr => {
         const firsSlide = currentIndex === 0;
         return firsSlide ? 0 : curr - 1;
       })
     } else {
       const isLastSlide = currentIndex === dataImages.length - 1;
-      if(!isLastSlide){
-        setCurrentindex( curr => curr + 1)
+      if (!isLastSlide) {
+        setCurrentindex(curr => curr + 1)
       }
     }
   }
@@ -54,11 +54,11 @@ const Slider: React.FC = () => {
     <section className={style.mainContainer}>
       <div className={style.sliderContainer}>
         <figure className={style.arrows}>
-          <img src={arrowLeft} alt="icon-arrow-left" 
-          onClick={() => showSlider('prev')}
+          <img src={arrowLeft} alt="icon-arrow-left"
+            onClick={() => showSlider('prev')}
           />
-          <img src={arrowRight} alt="icon-arrow-right" 
-          onClick={() => showSlider(' ')}
+          <img src={arrowRight} alt="icon-arrow-right"
+            onClick={() => showSlider(' ')}
           />
         </figure>
         <article className={style.containerInfo}>
@@ -66,17 +66,19 @@ const Slider: React.FC = () => {
             {
               dataImages.map(data => (
                 <li key={data.id}>
-                  <img src={data.imgMobile} alt={data.title} />
+                  <figure className={style.contentImg}>
+                    <img src={data.imgMobile} alt={data.title} />
+                    <img src={data.imgDesktop} alt={data.title} />
+                  </figure>
 
                   <div>
                     <h3>{data.title}</h3>
                     <p>{data.info}</p>
+                    <a href="#" className={style.iconArrow}>
+                      <p>SHOP NOW</p>
+                      <img src={arrow} alt="arrow" />
+                    </a>
                   </div>
-
-                  <a href="#" className={style.iconArrow}>
-                    <p>SHOP NOW</p>
-                    <img src={arrow} alt="" />
-                  </a>
                 </li>
               ))
             }

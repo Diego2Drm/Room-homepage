@@ -15,14 +15,14 @@ const NavBar: React.FC = () => {
 
   return (
     <section className={styles.container}>
-      <img src={iconMenu} alt="Icon-hamburger" 
+      <img src={iconMenu} alt="Icon-hamburger" className={styles.iconMenu}
       onClick={handleOpen}
       />
       <img src={logo} alt="Logo" />
 
       <nav className={ open ? styles.navbar : styles.dislabel}>
         <div className={styles.navbarContent}>
-          <img src={iconClose} alt="icon-close" 
+          <img src={iconClose} alt="icon-close" className={styles.iconClose}
            onClick={handleOpen}
           />
           <ul>
