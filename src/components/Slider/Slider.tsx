@@ -53,14 +53,15 @@ const Slider: React.FC = () => {
   return (
     <section className={style.mainContainer}>
       <div className={style.sliderContainer}>
-        <figure className={style.arrows}>
-          <img src={arrowLeft} alt="icon-arrow-left"
-            onClick={() => showSlider('prev')}
-          />
-          <img src={arrowRight} alt="icon-arrow-right"
-            onClick={() => showSlider(' ')}
-          />
-        </figure>
+        <div className={style.arrows}>
+          <button onClick={() => showSlider('prev')}>
+            <img src={arrowLeft} alt="icon-arrow-left" />
+          </button>
+          <button onClick={() => showSlider('next')}>
+            <img src={arrowRight} alt="icon-arrow-right"
+            />
+          </button>
+        </div>
         <article className={style.containerInfo}>
           <ul ref={listRef}>
             {
