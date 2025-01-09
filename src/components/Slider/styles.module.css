@@ -10,7 +10,6 @@
 
 .arrows {
   position: absolute;
-  background: var(--Black);
   right: 0;
   top: 31rem;
   width: 10rem;
@@ -18,7 +17,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  button{
+    background: var(--Black);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    &:hover{
+      background: var(--Dark-Gray);
+      transition: .2s ease-in-out;
+    }
+  }
 }
 
 .containerInfo {
@@ -78,6 +87,10 @@
             font-size: 1.6rem;
             letter-spacing: 1rem;
             font-weight: 700;
+            &:hover{
+              transition: .4s ease-in-out;
+              color: var(--Dark-Gray);
+            }
           }
         }
       }
@@ -89,6 +102,7 @@
   .arrows {
     right: 0;
     top: 43.7rem;
+    width: 15rem;
   }
 
   .containerInfo {
@@ -116,7 +130,6 @@
     top: 46rem;
     width: 15rem;
     height: 7.5rem;
-    gap: 5rem;
 
     img {
       width: 2rem;

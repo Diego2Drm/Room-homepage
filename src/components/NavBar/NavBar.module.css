@@ -37,6 +37,28 @@
   font-weight: 700;
   font-size: 1.4rem;
 }
+.navbarContent ul li{
+  cursor: pointer;
+  position: relative;
+}
+.navbarContent ul li::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: .2rem;
+  background: var(--White);
+  bottom: -1rem;
+  left: 0;
+  transform: scaleX(0);
+  transition: .5s ease-in-out;
+}
+.navbarContent ul li:hover{
+  transition: 1s ease-in-out;
+  text-shadow: .2rem .2rem .3rem var(--Black), 0 0 2rem blue, 0 0 0.3rem blue;
+}
+.navbarContent ul li:hover::after{
+ transform: scaleX(1);
+}
 
 @media (min-width: 1024px) {
   .container{
