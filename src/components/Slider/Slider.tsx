@@ -1,16 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
-import { data } from '../../utils/data'
+import { data, ImageKeys } from '../../utils/data'
 import arrowLeft from '../../assets/images/icon-angle-left.svg'
 import arrowRight from '../../assets/images/icon-angle-right.svg'
 import style from './styles.module.css'
 import arrow from '../../assets/images/icon-arrow.svg'
+import mHero1 from '../../assets/images/mobile-image-hero-1.jpg'
+import dHero1 from '../../assets/images/desktop-image-hero-1.jpg'
+import mHero2 from '../../assets/images/mobile-image-hero-2.jpg'
+import dHero2 from '../../assets/images/desktop-image-hero-2.jpg'
+import mHero3 from '../../assets/images/mobile-image-hero-3.jpg'
+import dHero3 from '../../assets/images/desktop-image-hero-3.jpg'
 
-interface Data {
+
+export interface Data {
   id: number,
-  imgMobile: string,
-  imgDesktop: string,
+  imgMobile: ImageKeys,
+  imgDesktop: ImageKeys,
   title: string,
-  info: string
+  info: string,
 }
 
 const Slider: React.FC = () => {
@@ -50,6 +57,18 @@ const Slider: React.FC = () => {
       }
     }
   }
+
+
+  const imageMap: Record<ImageKeys, string> = {
+    'src/assets/images/mobile-image-hero-1.jpg': mHero1,
+    'src/assets/images/desktop-image-hero-1.jpg': dHero1,
+    'src/assets/images/mobile-image-hero-2.jpg': mHero2,
+    'src/assets/images/desktop-image-hero-2.jpg': dHero2,
+    'src/assets/images/mobile-image-hero-3.jpg': mHero3,
+    'src/assets/images/desktop-image-hero-3.jpg': dHero3,
+  }
+
+
   return (
     <section className={style.mainContainer}>
       <div className={style.sliderContainer}>
@@ -68,8 +87,8 @@ const Slider: React.FC = () => {
               dataImages.map(data => (
                 <li key={data.id}>
                   <figure className={style.contentImg}>
-                    <img src={data.imgMobile} alt={data.title} />
-                    <img src={data.imgDesktop} alt={data.title} />
+                    <img src={imageMap[data.imgMobile]} alt={data.title} />
+                    <img src={imageMap[data.imgDesktop]} alt={data.title} />
                   </figure>
 
                   <div>

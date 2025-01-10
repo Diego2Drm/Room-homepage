@@ -1,5 +1,6 @@
+import { Data } from "../components/Slider/Slider";
 
-export const data = [
+export const data: Data[] = [
   {
     id: 1,
     imgMobile: 'src/assets/images/mobile-image-hero-1.jpg',
@@ -23,3 +24,10 @@ export const data = [
   },
 ]
 
+export type ImageKeys =
+  'src/assets/images/mobile-image-hero-1.jpg' |
+  'src/assets/images/desktop-image-hero-1.jpg' |
+  'src/assets/images/mobile-image-hero-2.jpg' |
+  'src/assets/images/desktop-image-hero-2.jpg' |
+  'src/assets/images/mobile-image-hero-3.jpg' |
+  'src/assets/images/desktop-image-hero-3.jpg';
