@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "League Spartan", serif;
+}
+:root {
+  --Dark-Gray: #a1a1a1;
+  --Black: #000000;
+  --White: #ffffff;
+  --Very-Dark-Gray: #454545;
+}
 .mainContainer {
   width: 100%;
   height: auto;

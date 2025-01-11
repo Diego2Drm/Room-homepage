@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "League Spartan", serif;
+}
+:root {
+  --Dark-Gray: #a1a1a1;
+  --Black: #000000;
+  --White: #ffffff;
+  --Very-Dark-Gray: #454545;
+}
 .container {
   background: linear-gradient(180deg, rgba(0, 0, 0, .5) 0%, transparent 100%);
   padding: 3rem 2rem;
@@ -62,7 +79,6 @@
 
 @media (min-width: 1024px) {
   .container{
-    background: transparent;
     align-items: center;
     gap: 5rem;
   }
